@@ -1,0 +1,9 @@
+#include <stdio.h>
+
+int main(void)
+{
+    int n =5;
+    char str[16];
+    sprintf(str,"n1 = %d", n);
+
+}
