@@ -1,0 +1,9 @@
+int main(void)
+{
+    int a = 5;
+    int b = 10;
+    char c = 97;
+    char d = 66;
+    int e = c+a;
+    int f = d+b;
+}
