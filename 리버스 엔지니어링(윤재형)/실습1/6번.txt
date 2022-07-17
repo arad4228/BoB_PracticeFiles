@@ -1,0 +1,22 @@
+main:
+        push    ebp
+        mov     ebp, esp
+        sub     esp, 32
+
+        mov     DWORD PTR [ebp-32], 1868787305
+        mov     DWORD PTR [ebp-28], 1953066599
+        mov     DWORD PTR [ebp-24], 1818585120
+        mov     DWORD PTR [ebp-20], 28524
+        mov     DWORD PTR [ebp-16], 0
+        mov     DWORD PTR [ebp-12], 0
+        lea     eax, [ebp-32]
+        mov     DWORD PTR [ebp-4], eax
+
+        mov     eax, DWORD PTR [ebp-4]
+        add     eax, 6
+        movzx   eax, BYTE PTR [eax]
+        movsx   eax, al
+        mov     DWORD PTR [ebp-8], eax
+        mov     eax, 0
+        leave
+        ret

@@ -1,0 +1,19 @@
+main:
+        push    ebp
+        mov     ebp, esp
+        sub     esp, 32
+        mov     DWORD PTR [ebp-4], 5
+        mov     DWORD PTR [ebp-8], 10
+        mov     BYTE PTR [ebp-9], 97
+        mov     BYTE PTR [ebp-10], 66
+        movsx   edx, BYTE PTR [ebp-9]
+        mov     eax, DWORD PTR [ebp-4]
+        add     eax, edx
+        mov     DWORD PTR [ebp-16], eax
+        movsx   edx, BYTE PTR [ebp-10]
+        mov     eax, DWORD PTR [ebp-8]
+        add     eax, edx
+        mov     DWORD PTR [ebp-20], eax
+        mov     eax, 0
+        leave
+        ret

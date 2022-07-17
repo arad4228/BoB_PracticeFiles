@@ -1,0 +1,21 @@
+main:
+        push    ebp
+        mov     ebp, esp
+        sub     esp, 16
+        mov     DWORD PTR [ebp-4], 5
+        mov     DWORD PTR [ebp-8], 10
+        mov     edx, DWORD PTR [ebp-4]
+        mov     eax, DWORD PTR [ebp-8]
+        add     eax, edx
+        mov     DWORD PTR [ebp-12], eax
+        mov     eax, 0
+        leave
+        ret
+
+
+int main(void)
+{
+    int a = 5;
+    int b = 10;
+    int c = a + b;
+}

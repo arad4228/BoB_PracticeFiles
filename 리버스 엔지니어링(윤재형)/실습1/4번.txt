@@ -1,0 +1,29 @@
+.LC0:
+        .string "Hello, %s"
+main:
+        lea     ecx, [esp+4]
+        and     esp, -16
+        push    DWORD PTR [ecx-4]
+
+        push    ebp
+        mov     ebp, esp
+        push    ecx
+        sub     esp, 36
+
+        mov     DWORD PTR [ebp-18], 1868787305 // "inco"
+        mov     DWORD PTR [ebp-14], 1819043176 // "hell"
+        mov     WORD PTR [ebp-10], 111 // 'o'
+        sub     esp, 4
+        lea     eax, [ebp-18]
+        push    eax
+        push    OFFSET FLAT:.LC0
+        lea     eax, [ebp-38]
+        push    eax
+        call    sprintf
+        add     esp, 16
+        mov     eax, 0
+
+        mov     ecx, DWORD PTR [ebp-4]
+        leave
+        lea     esp, [ecx-4]
+        ret
